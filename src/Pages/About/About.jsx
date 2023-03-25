@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import logo from "../../data/logo.jpg";
 
 const About = () => {
   return (
@@ -18,7 +19,7 @@ const About = () => {
       <Row>
         <Col md={6}>
           <Image
-            src="https://scontent.fjrs26-1.fna.fbcdn.net/v/t39.30808-6/304124944_451655653675917_2151081251938326824_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=MGsO1NtRNfcAX8Mtq3m&_nc_ht=scontent.fjrs26-1.fna&oh=00_AfDNK92V8ieCmweO0GeafIEJSusvVpVareny35fCJ97D3w&oe=6405B199"
+            src={logo}
             alt="About Us"
             fluid
             width={500}
@@ -27,34 +28,25 @@ const About = () => {
           />
         </Col>
         <Col md={6}>
-          <h2>About Us</h2>
+          <h2>حول المتجر</h2>
           <p>
-            Welcome to our online store, where you can find the latest and
-            greatest Xbox and PlayStation game codes, subscriptions, and
-            accounts. Our mission is to provide you with a hassle-free and
-            enjoyable gaming experience, by offering you easy and affordable
-            access to the best games on the market. Whether you're a casual
-            gamer or a serious enthusiast, we have everything you need to take
-            your gaming to the next level. From new releases to classic titles,
-            we've got you covered. Our selection of game codes includes Xbox and
-            PlayStation exclusives, as well as popular multi-platform games. We
-            also offer a variety of subscriptions, such as Xbox Game Pass and
-            PlayStation Plus, which give you access to a constantly updated
-            library of games for a low monthly fee. At our store, we pride
-            ourselves on providing excellent customer service. Our team is made
-            up of gaming enthusiasts who are passionate about sharing their
-            knowledge and expertise with you. We are always available to answer
-            your questions, and to help you find the perfect game or
-            subscription for your needs. We also offer fast and reliable
-            delivery, so you can start playing your new games as soon as
-            possible. In addition to game codes and subscriptions, we also offer
-            Xbox and PlayStation accounts. These accounts come pre-loaded with
-            games, subscriptions, and other bonuses, so you can start gaming
-            right away. We take great care to ensure that our accounts are safe,
-            secure, and legitimate, so you can buy with confidence. Thank you
-            for choosing our online store for your gaming needs. We hope you
-            enjoy your experience with us, and we look forward to serving you
-            for many years to come.
+            مرحبًا بك في متجرنا عبر الإنترنت، حيث يمكنك العثور على آخر وأفضل
+            أكواد واشتراكات وحسابات ألعاب Xbox وPlayStation. هدفنا هو توفير
+            تجربة لعب ممتعة وسهلة لك، من خلال توفير وصول سهل وبأسعار معقولة إلى
+            أفضل الألعاب في السوق. سواء كنت لاعبًا عاديًا أو عاشقًا جدي، لدينا
+            كل ما تحتاجه للوصول إلى مستوى لعب جديد. بدءًا من الإصدارات الجديدة
+            حتى الألقاب الكلاسيكية، نحن نغطي كل شيء. تشمل مجموعتنا من أكواد
+            الألعاب حصريات Xbox وPlayStation، وكذلك ألعاب متعددة المنصات
+            الشهيرة. نقدم أيضًا مجموعة متنوعة من الاشتراكات، مثل Xbox Game Pass
+            و PlayStation Plus، التي تتيح لك الوصول إلى مكتبة من الألعاب التي
+            يتم تحديثها باستمرار مقابل رسوم شهرية منخفضة. في متجرنا، نفخر بتوفير
+            خدمة عملاء ممتازة. فريقنا مؤلف من عشاق الألعاب الذين يشاركون شغفهم
+            وخبرتهم معك. نحن دائمًا متاحون للإجابة على أسئلتك، ومساعدتك في
+            العثور على اللعبة المثالية أو الاشتراك المناسب لاحتياجاتك. نقدم
+            أيضًا توصيلًا سريعًا وموثوقًا، حتى تتمكن من البدء في اللعب بألعابك
+            الجديدة في أقرب وقت ممكن. بالإضافة إلى أكواد واشتراكات الألعاب، نقدم
+            أيضًا حسابات Xbox و PlayStation، والتي تأتي محملة مسبقًا بالألعاب
+            والاشتراكات والمكافآت الأخرى، حتى تتمكن من البدء في اللعب على
           </p>
         </Col>
       </Row>

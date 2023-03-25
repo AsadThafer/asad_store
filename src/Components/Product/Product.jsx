@@ -28,10 +28,12 @@ const Product = ({ product }) => {
                 return <div className="bi-star-fill" key={i} />;
               })}
             </div>
-            <div className="text-muted text-decoration-line-through">
-              {oldprice} ₪
-            </div>
-            {newprice} ₪
+            {oldprice ? (
+              <div className="text-muted text-decoration-line-through">
+                {oldprice} ₪
+              </div>
+            ) : null}
+            {newprice ? `${newprice} ₪` : null}
           </div>
         </div>
         {/* Product actions*/}

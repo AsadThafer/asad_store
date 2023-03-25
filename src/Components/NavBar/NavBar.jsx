@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const NavBar = ({ children }) => {
+const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container px-4 px-lg-5">
@@ -11,14 +11,12 @@ const NavBar = ({ children }) => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
             <li className="nav-item">
               <Link to="/" className="nav-link active" aria-current="page">
-                {" "}
-                Home{" "}
+                الرئيسية
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link">
-                {" "}
-                About
+              <Link to="/about" className="nav-link active" aria-current="page">
+                حول المتجر
               </Link>
             </li>
           </ul>

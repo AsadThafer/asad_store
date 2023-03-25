@@ -1,11 +1,12 @@
 const products = [
   {
     id: 1,
-    name: "Xbox Game Pass 12 months",
-    description:
-      "12 months of xbox game pass where you can play over 100 games",
-    oldprice: 220,
-    newprice: 180,
+    name: "اشتراك اكسبوكس جيم باس التيمت 13 شهر",
+    description: "13 شهرًا من بطاقة ألعاب Xbox  حيث يمكنك لعب أكثر من 100 لعبة",
+    note: `أن يكون حسابك منتهي/مخلص جميع الإشتراكات وان يكون خطة التجديد التلقائي الشهري مغلقة من اجل استخدام الاشتراك .
+    هذه التعليمات مهمة للاستفادة من الإشتراك .. وعدم التزامك بها يعد مشكلة منك .. ونحن بخدمتك على الواتس اب اذا احتجت المساعدة ..`,
+    oldprice: 280.0,
+    newprice: 210.0,
     rating: 5,
     onsale: true,
     image:
@@ -13,12 +14,12 @@ const products = [
   },
   {
     id: 2,
-    name: "PlayStation Plus Essential 365 Days US",
-    description: `Playstation Plus is the other kind of PS gift card you can find in our collection. PS Plus is a subscription service that provides players with plenty of benefits. Foremost, it gives access to online multiplayer, so you can share the fun with your friends and players all over the world. 
+    name: "اشتراك بلايستيشن بلس 365 يوم امريكي",
+    description: `Playstation Plus هو النوع الآخر من بطاقات هدايا PS التي يمكنك العثور عليها في مجموعتنا. PS Plus هي خدمة اشتراك توفر للاعبين الكثير من الفوائد. قبل كل شيء ، يتيح لك الوصول إلى اللاعبين المتعددين عبر الإنترنت ، بحيث يمكنك مشاركة المرح مع أصدقائك واللاعبين في جميع أنحاء العالم.
 
-    Exclusive PS Store discounts and two free games a month are other perks worth mentioning. Moreover, there's a PlayStation Plus Collection full of Sony bestsellers that PS Plus subscribers who own PS5 can play for free. To be honest, the list is quite impressive. It includes God of War, Days Gone, Detroit: Become Human, Uncharted 4: A Thief's End, and many other iconic titles. `,
-    oldprice: 250,
-    newprice: 200,
+    خصومات PS Store الحصرية ولعبتين مجانيتين شهريًا هي مزايا أخرى جديرة بالذكر. علاوة على ذلك ، هناك مجموعة PlayStation Plus مليئة بأكثر الكتب مبيعًا من Sony والتي يمكن لمشتركي PS Plus الذين يمتلكون PS5 تشغيلها مجانًا. أن نكون صادقين ، القائمة رائعة للغاية. وهي تشمل God of War و Days Gone و Detroit: Become Human و Uncharted 4: A Thief's End والعديد من الألقاب الشهيرة الأخرى. `,
+    oldprice: 300.0,
+    newprice: 250.0,
     rating: 4,
     onsale: true,
     image:
@@ -26,23 +27,26 @@ const products = [
   },
   {
     id: 3,
-    name: "Product 3",
-    description: "Description of product 3",
-    oldprice: 7.99,
-    newprice: 6.99,
+    name: "حساب ستيم تركيا  ",
+    description:
+      "حسابات Steam التي نبيعها هي مناطق عشوائية في تركيا بشكل افتراضي لذلك ، يرجى عدم استخدام عملتك المحلية لشراء أي شيء على حساب Steam ، وإلا فإننا لن نكون مسؤولين عن الحظر الرسمي الناجم ، آمل أن تتمكن من فهم ذلك ،  شكرًا لك",
+    note: "البريد الإلكتروني الأصلي + الوصول الكامل + 0 ألعاب ، اتصل بنا للحصول على بطاقات رصيد تركيا",
+    oldprice: 50.0,
+    newprice: 40.0,
     rating: 5,
-    onsale: false,
-    image: "",
+    onsale: true,
+    image:
+      "https://media.karousell.com/media/photos/products/2022/2/21/steam_account_turkey_1645410489_8b9b4d62_progressive.jpg",
   },
   {
     id: 4,
-    name: "Product 4",
-    description: "Description of product 4",
-    oldprice: 7.99,
-    newprice: 6.99,
+    name: "بطاقات رصيد ستيم تركيا ",
+    description: "رصيد ستيم تركيا بفئات مختفلة",
+    note: "تواصل معنا لتزويدك بالسعر حسب الفئة المطلوبة",
     rating: 5,
     onsale: false,
-    image: "",
+    image:
+      "https://cdn.cdkeys.com/700x700/media/catalog/product/t/z/tzyf8lak6qwynr4mlikvnryl_4_.jpg",
   },
   {
     id: 5,

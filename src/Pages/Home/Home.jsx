@@ -23,7 +23,7 @@ const Home = () => {
           <div className="text-center text-white">
             <h1 className="display-4 fw-bolder">Shop for Games</h1>
             <p className="lead fw-normal text-white-50 mb-0">
-              We have the best games for you
+              لدينا أفضل الألعاب الإلكترونية لك
             </p>
           </div>
         </div>
@@ -38,7 +38,7 @@ const Home = () => {
                 className="input-group-text"
                 id="inputGroup-sizing-default"
               >
-                Search For a Product
+                ابحث عن منتج
               </label>
             </div>
             <input
