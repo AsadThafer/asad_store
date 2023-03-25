@@ -3,7 +3,7 @@ import "./Home.css";
 import Product from "../../Components/Product/Product.jsx";
 import products from "../../data/products.jsx";
 import categories from "../../data/categories";
-import "./Home.css";
+
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -21,10 +21,10 @@ const Home = () => {
       if (category == 0 && searchTerm === "") {
         return product.name.toLowerCase().includes(searchTerm);
       }
-      if (category == 0 && searchTerm !== "") {
+      if (category === 0 && searchTerm !== "") {
         return product.name.toLowerCase().includes(searchTerm);
       }
-      if (category != 0 && searchTerm === "") {
+      if (category !== 0 && searchTerm === "") {
         return product.category === category;
       }
 
@@ -52,7 +52,7 @@ const Home = () => {
       </header>
       {/* Section*/}
       <section className="py-5">
-        <div className="container px-4 px-lg-5 mt-5">
+        <div className="container px-4 px-lg-5 mt-5 ">
           <div class="input-group mb-3">
             <div className="input-group-prepend">
               <label
@@ -72,8 +72,9 @@ const Home = () => {
               onChange={handleChange}
               id="search"
             />
-            &nbsp;
-            <div className="input-group-prepend">
+          </div>
+          <div class="input-group mb-3 ">
+            <div className="input-group-prepend ">
               <label
                 htmlFor="search"
                 className="input-group-text"
@@ -83,7 +84,7 @@ const Home = () => {
               </label>
             </div>
             <select
-              className="form-select"
+              className="form-select text-center "
               aria-label="Default select example"
               onChange={updateCategory}
             >
@@ -95,13 +96,14 @@ const Home = () => {
               ))}
             </select>
           </div>
-
           <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             {searchResults.length === 0 ? (
               <div className="text-center text-black">
-                <h1 className="display-4 fw-bolder">No Results</h1>
+                <h1 className="display-6 fw-bolder">
+                  لا يوجد نتائج مطابقة للبحث
+                </h1>
                 <p className="lead fw-normal text-black-50 mb-0">
-                  Try searching for something else
+                  يرجى إعادة المحاولة مرة أخرى
                 </p>
               </div>
             ) : (

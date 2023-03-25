@@ -30,19 +30,11 @@ const ProductPage = () => {
         <div className="container px-4 px-lg-5 my-5">
           <div className="row gx-4 gx-lg-5 align-items-center">
             <div className="col-md-6">
-              {product.image === "" ? (
-                <img
-                  className="card-img-top mb-5 mb-md-0"
-                  src={dumpimage}
-                  alt={dumpimage}
-                />
-              ) : (
-                <img
-                  className="card-img-top mb-5 mb-md-0"
-                  src={product.image}
-                  alt={product.name}
-                />
-              )}
+              <img
+                className="card-img-top mb-5 mb-md-0"
+                src={product.image ? product.image : dumpimage}
+                alt={product.name}
+              />
             </div>
             <div className="col-md-6">
               <div className="small mb-1">
@@ -65,41 +57,55 @@ const ProductPage = () => {
               <p className="lead">{product.description}</p>
               <div className="d-flex flex-column">
                 <p>
-                  <label className="lead" htmlFor="inputQuantity">
-                    الكمية :
-                  </label>
-                  <input
-                    className="form-control text-center me-3"
-                    id="inputQuantity"
-                    type="num"
-                    value={quantity}
-                    onChange={(e) => setQuantity(e.target.value)}
-                    style={{ maxWidth: "3rem" }}
-                  />
+                  <div className="row align-items-center">
+                    <div className="col-auto">
+                      <label className="lead" htmlFor="inputQuantity">
+                        الكمية :
+                      </label>
+                    </div>
+                    <div className="col-auto">
+                      <input
+                        className="form-control text-center me-3"
+                        id="inputQuantity"
+                        type="num"
+                        value={quantity}
+                        onChange={(e) => setQuantity(e.target.value)}
+                        style={{ maxWidth: "3rem" }}
+                      />
+                    </div>
+                  </div>
                 </p>
                 <p>
-                  <label className="lead" htmlFor="inputPaymentMethod">
-                    طريقة الدفع :
-                  </label>
-
-                  <select
-                    className="form-select text-center me-3"
-                    id="inputPaymentMethod"
-                    aria-label="Default select example"
-                    onChange={(e) => {
-                      setPaymentMethod(paymentMethods[e.target.value - 1]);
-                    }}
-                  >
-                    {paymentMethods.map((paymentMethod) => (
-                      <option key={paymentMethod.id} value={paymentMethod.id}>
-                        {paymentMethod.name}
-                      </option>
-                    ))}
-                  </select>
+                  <div className="row align-items-center">
+                    <div className="col-auto">
+                      <label className="lead" htmlFor="inputPaymentMethod">
+                        طريقة الدفع :
+                      </label>
+                    </div>
+                    <div className="col-auto">
+                      <select
+                        className="form-select text-center me-3 "
+                        id="inputPaymentMethod"
+                        aria-label="Default select example"
+                        onChange={(e) => {
+                          setPaymentMethod(paymentMethods[e.target.value - 1]);
+                        }}
+                      >
+                        {paymentMethods.map((paymentMethod) => (
+                          <option
+                            key={paymentMethod.id}
+                            value={paymentMethod.id}
+                          >
+                            {paymentMethod.name}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
                 </p>
                 {paymentMethod.tax ? (
                   <div className="alert alert-danger fw-bolder" role="alert">
-                    {paymentMethod.taxrate} % عمولة زياد على الرصيد الجوال
+                    {paymentMethod.taxrate} % عمولة زيادة على الرصيد الجوال
                     <br />
                     {product.newprice ? (
                       <>
@@ -114,9 +120,10 @@ const ProductPage = () => {
                 ) : null}
 
                 <button
-                  className="btn btn-outline-dark flex-shrink-0"
+                  className="btn btn-outline-dark flex-shrink-0 w-50"
                   type="button"
                   onClick={sendonWhatsApp}
+                  w
                 >
                   <i className="bi bi-whatsapp" /> تواصل معنا عبر الواتس اب
                 </button>

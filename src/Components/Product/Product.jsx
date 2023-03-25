@@ -14,7 +14,7 @@ const Product = ({ product }) => {
           </div>
         )}
         <img
-          className="card-img-top"
+          className="card-img-top img-fluid"
           src={image === "" ? dumpimage : image}
           alt={name}
           style={{ height: "320px", width: "268px", objectFit: "cover" }}

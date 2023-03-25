@@ -4,7 +4,7 @@ import logo from "../../data/logo.jpg";
 
 const About = () => {
   return (
-    <Container>
+    <div className="container px-4 px-lg-5 my-5">
       <Row>
         <div className="container px-4 px-lg-5 my-5">
           <div className="text-center text-black">
@@ -22,8 +22,8 @@ const About = () => {
             src={logo}
             alt="About Us"
             fluid
-            width={500}
-            height={500}
+            width={400}
+            height={400}
             rounded
           />
         </Col>
@@ -46,11 +46,11 @@ const About = () => {
             أيضًا توصيلًا سريعًا وموثوقًا، حتى تتمكن من البدء في اللعب بألعابك
             الجديدة في أقرب وقت ممكن. بالإضافة إلى أكواد واشتراكات الألعاب، نقدم
             أيضًا حسابات Xbox و PlayStation، والتي تأتي محملة مسبقًا بالألعاب
-            والاشتراكات والمكافآت الأخرى، حتى تتمكن من البدء في اللعب على
+            والاشتراكات والمكافآت الاخرى.
           </p>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };
 
