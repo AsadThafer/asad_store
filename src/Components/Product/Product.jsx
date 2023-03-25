@@ -13,12 +13,12 @@ const Product = ({ product }) => {
             Sale
           </div>
         )}
-
-        {image === "" ? (
-          <img className="card-img-top" src={dumpimage} alt={dumpimage} />
-        ) : (
-          <img className="card-img-top" src={image} alt={name} />
-        )}
+        <img
+          className="card-img-top"
+          src={image === "" ? dumpimage : image}
+          alt={name}
+          style={{ height: "320px", width: "268px", objectFit: "cover" }}
+        />
 
         <div className="card-body p-4">
           <div className="text-center">
@@ -44,7 +44,7 @@ const Product = ({ product }) => {
               to={`/product/${id}`}
             >
               {" "}
-              View Options
+              عرض الخيارات
             </Link>
           </div>
         </div>

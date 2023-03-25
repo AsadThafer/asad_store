@@ -11,6 +11,7 @@ const products = [
     onsale: true,
     image:
       "https://assets.xboxservices.com/assets/26/b8/26b87bdf-d6ca-446a-8fc9-a5fe6e6484fd.jpg?n=XGP_Image-0_Boxshot-Standard_XGP-Catalog_720x1080.jpg",
+    category: "1",
   },
   {
     id: 2,
@@ -24,7 +25,9 @@ const products = [
     onsale: true,
     image:
       "https://image.api.playstation.com/vulcan/ap/rnd/202205/1607/M7ryNMBbKxjWWqgswbKEvjfB.png?w=780&thumb=false",
+    category: "1",
   },
+
   {
     id: 3,
     name: "حساب ستيم تركيا  ",
@@ -37,6 +40,7 @@ const products = [
     onsale: true,
     image:
       "https://media.karousell.com/media/photos/products/2022/2/21/steam_account_turkey_1645410489_8b9b4d62_progressive.jpg",
+    category: "2",
   },
   {
     id: 4,
@@ -47,6 +51,7 @@ const products = [
     onsale: false,
     image:
       "https://cdn.cdkeys.com/700x700/media/catalog/product/t/z/tzyf8lak6qwynr4mlikvnryl_4_.jpg",
+    category: "3",
   },
   {
     id: 5,
@@ -55,9 +60,10 @@ const products = [
       "ابتكر ، استكشف ، ابق ، كرر. Minecraft: Java Edition و Bedrock Edition هما الآن صفقة شاملة لنظام Windows. Minecraft: يتيح لك إصدار Java & Bedrock الوصول إلى كلتا اللعبتين في عملية شراء واحدة وقاذفة موحدة واحدة ، مما يجعل الانتقال من إصدار إلى آخر أسهل من أي وقت مضى. العب مع أي لعبة Minecrafter ببساطة عن طريق التبديل إلى الإصدار الذي يمتلكه أصدقاؤك. يمكنك الآن الاستمتاع بضعف التعدين ومضاعفة الصناعة - مع عدد أكبر من Minecrafters أكثر من أي وقت مضى.",
     oldprice: 130.0,
     newprice: 115.0,
-    rating: 5,
+    rating: 4,
     onsale: true,
     image: "https://i.ytimg.com/vi/qNMfF9TYETM/maxresdefault.jpg",
+    category: "4",
   },
 ];
 

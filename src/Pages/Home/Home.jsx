@@ -2,19 +2,41 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 import Product from "../../Components/Product/Product.jsx";
 import products from "../../data/products.jsx";
+import categories from "../../data/categories";
 import "./Home.css";
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [category, setCategory] = useState(0);
+
+  const updateCategory = (event) => {
+    setCategory(event.target.value);
+  };
+
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
   };
   useEffect(() => {
-    const results = products.filter((product) =>
-      product.name.toLowerCase().includes(searchTerm)
-    );
+    const results = products.filter((product) => {
+      if (category == 0 && searchTerm === "") {
+        return product.name.toLowerCase().includes(searchTerm);
+      }
+      if (category == 0 && searchTerm !== "") {
+        return product.name.toLowerCase().includes(searchTerm);
+      }
+      if (category != 0 && searchTerm === "") {
+        return product.category === category;
+      }
+
+      return (
+        product.category == category &&
+        product.name.toLowerCase().includes(searchTerm)
+      );
+    });
     setSearchResults(results);
-  }, [searchTerm]);
+    console.log(results);
+    console.log(category);
+  }, [searchTerm, category]);
 
   return (
     <>
@@ -50,6 +72,28 @@ const Home = () => {
               onChange={handleChange}
               id="search"
             />
+            &nbsp;
+            <div className="input-group-prepend">
+              <label
+                htmlFor="search"
+                className="input-group-text"
+                id="inputGroup-sizing-default"
+              >
+                فرز حسب الفئة
+              </label>
+            </div>
+            <select
+              className="form-select"
+              aria-label="Default select example"
+              onChange={updateCategory}
+            >
+              <option value={0} selected>
+                الكل
+              </option>
+              {categories.map((category) => (
+                <option value={category.id}>{category.name}</option>
+              ))}
+            </select>
           </div>
 
           <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">

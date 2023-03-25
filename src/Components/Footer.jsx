@@ -3,8 +3,9 @@ const Footer = () => {
     <footer className="py-5 bg-dark">
       <div className="container">
         <p className="m-0 text-center text-white">
-          Copyright © Asad's Store 2023
+          جميع حقوق الطبع و النشر محفوظة
         </p>
+        <p className="m-0 text-center text-white">© Asad's Store 2023</p>
         <div className="m-0 text-center text-white">
           <a
             href="https://www.facebook.com/AsadGamerStore"
