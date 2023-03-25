@@ -11,7 +11,6 @@ const ProductPage = () => {
   console.log(paymentMethod);
 
   const [product, setProduct] = useState(products[id - 1]);
-  const [finalPrice, setFinalPrice] = useState(product.newprice);
   const sendonWhatsApp = () => {
     window.open(
       `https://api.whatsapp.com/send?phone=972595681131&text=السلام عليكم ورحمة الله وبركاته%0A%0Aأريد شراء ${product.name} عدد ${quantity} وطريقة الدفع ${paymentMethod.name} %0A%0Aمع تحياتي`
@@ -56,7 +55,7 @@ const ProductPage = () => {
                     {product.oldprice} ₪
                   </div>
                 ) : null}
-                <div>{product.newprice} ₪</div>
+                {product.newprice ? `${product.newprice} ₪` : null}
               </div>
               {product.note ? (
                 <div className="alert alert-danger fw-bolder" role="alert">
