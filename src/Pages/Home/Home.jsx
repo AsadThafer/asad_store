@@ -3,6 +3,7 @@ import "./Home.css";
 import Product from "../../Components/Product/Product.jsx";
 import products from "../../data/products.jsx";
 import categories from "../../data/categories";
+import WhatsAppButton from "../../Components/WhatsAppButton/WhatsAppButton.jsx";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -18,6 +19,7 @@ const Home = () => {
   };
   useEffect(() => {
     const results = products.filter((product) => {
+      // eslint-disable-next-line eqeqeq
       if (category == 0 && searchTerm === "") {
         return product.name.toLowerCase().includes(searchTerm);
       }
@@ -29,13 +31,12 @@ const Home = () => {
       }
 
       return (
+        // eslint-disable-next-line eqeqeq
         product.category == category &&
         product.name.toLowerCase().includes(searchTerm)
       );
     });
     setSearchResults(results);
-    console.log(results);
-    console.log(category);
   }, [searchTerm, category]);
 
   return (
@@ -115,8 +116,10 @@ const Home = () => {
                   لا يوجد نتائج مطابقة للبحث
                 </h1>
                 <p className="lead fw-normal text-black-50 mb-0">
-                  يرجى إعادة المحاولة مرة أخرى
+                  يرجى إعادة المحاولة مرة أخرى اذا لم تجد ما تبحث عنه يمكنك
+                  الاتصال بنا
                 </p>
+                <WhatsAppButton width={100} />
               </div>
             ) : (
               searchResults.map((product) => (

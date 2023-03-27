@@ -11,7 +11,7 @@ const paymentMethods = [
   },
   {
     id: 3,
-    name: " كاش في نقطة دفع",
+    name: " كاش في نقطة دفع - طولكرم",
     tax: false,
   },
   {

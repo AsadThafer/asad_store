@@ -2,20 +2,15 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import products from "../../data/products.jsx";
 import paymentMethods from "../../data/paymentMethods.jsx";
+import WhatsAppButton from "../../Components/WhatsAppButton/WhatsAppButton.jsx";
 
 const dumpimage = "https://dummyimage.com/450x300/dee2e6/6c757d.jpg";
 const ProductPage = () => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
   const [paymentMethod, setPaymentMethod] = useState(paymentMethods[0]);
-  console.log(paymentMethod);
 
   const [product, setProduct] = useState(products[id - 1]);
-  const sendonWhatsApp = () => {
-    window.open(
-      `https://api.whatsapp.com/send?phone=972595681131&text=السلام عليكم ورحمة الله وبركاته%0A%0Aأريد شراء ${product.name} عدد ${quantity} وطريقة الدفع ${paymentMethod.name} %0A%0Aمع تحياتي`
-    );
-  };
 
   useEffect(() => {
     if (product) {
@@ -54,11 +49,17 @@ const ProductPage = () => {
                   {product.note}
                 </div>
               ) : null}
-              <p className="lead">{product.description}</p>
+              <div className="lead">{product.description}</div>
               <div className="d-flex flex-column">
-                <p>
+                <div>
                   <div className="row align-items-center">
-                    <div className="col-auto">
+                    <div
+                      className="col-auto"
+                      style={{
+                        marginTop: "1rem",
+                        marginBottom: "1rem",
+                      }}
+                    >
                       <label className="lead" htmlFor="inputQuantity">
                         الكمية :
                       </label>
@@ -70,14 +71,20 @@ const ProductPage = () => {
                         type="num"
                         value={quantity}
                         onChange={(e) => setQuantity(e.target.value)}
-                        style={{ maxWidth: "3rem" }}
+                        style={{ maxWidth: "4rem" }}
                       />
                     </div>
                   </div>
-                </p>
-                <p>
+                </div>
+                <div>
                   <div className="row align-items-center">
-                    <div className="col-auto">
+                    <div
+                      className="col-auto"
+                      style={{
+                        marginTop: "1rem",
+                        marginBottom: "1rem",
+                      }}
+                    >
                       <label className="lead" htmlFor="inputPaymentMethod">
                         طريقة الدفع :
                       </label>
@@ -102,7 +109,7 @@ const ProductPage = () => {
                       </select>
                     </div>
                   </div>
-                </p>
+                </div>
                 {paymentMethod.tax ? (
                   <div className="alert alert-danger fw-bolder" role="alert">
                     {paymentMethod.taxrate} % عمولة زيادة على الرصيد الجوال
@@ -119,14 +126,12 @@ const ProductPage = () => {
                   </div>
                 ) : null}
 
-                <button
-                  className="btn btn-outline-dark flex-shrink-0 w-50"
-                  type="button"
-                  onClick={sendonWhatsApp}
-                  w
-                >
-                  <i className="bi bi-whatsapp" /> تواصل معنا عبر الواتس اب
-                </button>
+                <WhatsAppButton
+                  product={product}
+                  quantity={quantity}
+                  paymentMethod={paymentMethod}
+                  width={50}
+                />
               </div>
             </div>
           </div>
