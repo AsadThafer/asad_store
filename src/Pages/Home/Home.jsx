@@ -23,10 +23,12 @@ const Home = () => {
       if (category == 0 && searchTerm === "") {
         return product.name.toLowerCase().includes(searchTerm);
       }
-      if (category === 0 && searchTerm !== "") {
+      // eslint-disable-next-line eqeqeq
+      if (category == 0 && searchTerm != "") {
         return product.name.toLowerCase().includes(searchTerm);
       }
-      if (category !== 0 && searchTerm === "") {
+      // eslint-disable-next-line eqeqeq
+      if (category != 0 && searchTerm == "") {
         return product.category === category;
       }
 

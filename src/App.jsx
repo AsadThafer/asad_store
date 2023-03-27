@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ErrorBoundary from "./Components/ErrorBoundary";
 import NavBar from "./Components/NavBar/NavBar";
 import About from "./Pages/About/About";
-import Footer from "./Components/Footer";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
