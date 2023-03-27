@@ -101,13 +101,14 @@ const Home = () => {
                 padding: "0.5rem",
                 width: "80%",
                 boxSizing: "border-box",
+                defaultValue: 0,
               }}
             >
-              <option value={0} selected>
-                الكل
-              </option>
+              <option value={0}>الكل</option>
               {categories.map((category) => (
-                <option value={category.id}>{category.name}</option>
+                <option key={category.id} value={category.id}>
+                  {category.name}
+                </option>
               ))}
             </select>
           </div>

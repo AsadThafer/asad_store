@@ -3,6 +3,7 @@ import MineCraftImage from "./productsImages/MCBedRock.jpg";
 import psPlusImage from "./productsImages/PSPLUS.webp";
 import steamTRImage from "./productsImages/steam_turkey.jpg";
 import steamTRCreditImage from "./productsImages/SteamTL.jpg";
+import canvaImage from "./productsImages/canva.jpg";
 
 const products = [
   {
@@ -45,6 +46,7 @@ const products = [
     image: steamTRImage,
     category: "2",
   },
+
   {
     id: 4,
     name: "بطاقات رصيد ستيم تركيا ",
@@ -66,6 +68,19 @@ const products = [
     onsale: true,
     image: MineCraftImage,
     category: "4",
+  },
+  {
+    id: 6,
+    name: "اشتراك كانفا بريميوم  ",
+    description:
+      "كانفا بريميوم هو أحد أفضل مواقع التصميم الرقمي على الإطلاق. يمكنك الوصول إلى أكثر من 60 مليون صورة مجانية وملف موسيقى وفيديو وملفات بي دي إف نتيح لك الوصول للميزات الحصرية المدفوعة عن طريق الاشتراك في كانفا بريميوم بإضافتك لفريق كانفا التعليمي",
+    note: "تقوم بتزويدنا ببريدك الالكتروني الخاص لنقوم بإضافتك ل كانفا بريميوم عن طريق canva edu , الاشتراك مضمون لمدة 6 شهور تواصل معنا اذا واجهتك أي مشاكل من تاريخ الشراء",
+    oldprice: 35.0,
+    newprice: 25.0,
+    rating: 5,
+    onsale: true,
+    image: canvaImage,
+    category: "1",
   },
 ];
 

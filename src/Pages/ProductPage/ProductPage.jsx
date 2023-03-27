@@ -9,14 +9,23 @@ const ProductPage = () => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
   const [paymentMethod, setPaymentMethod] = useState(paymentMethods[0]);
-
+  const [finalPrice, setFinalPrice] = useState(0);
   const [product, setProduct] = useState(products[id - 1]);
 
   useEffect(() => {
     if (product) {
       setProduct(products[id - 1]);
     }
-  }, [product, id]);
+    if (paymentMethod.tax) {
+      setFinalPrice(
+        Math.ceil(
+          product.newprice + (product.newprice * paymentMethod.taxrate) / 100
+        )
+      );
+    } else {
+      setFinalPrice(product.newprice);
+    }
+  }, [product, id, paymentMethod]);
 
   return (
     <>
@@ -115,13 +124,7 @@ const ProductPage = () => {
                     {paymentMethod.taxrate} % عمولة زيادة على الرصيد الجوال
                     <br />
                     {product.newprice ? (
-                      <>
-                        {" "}
-                        السعر النهائي :{" "}
-                        {product.newprice +
-                          (product.newprice * paymentMethod.taxrate) / 100}{" "}
-                        ₪
-                      </>
+                      <>السعر النهائي : {finalPrice}₪</>
                     ) : null}
                   </div>
                 ) : null}
@@ -131,6 +134,7 @@ const ProductPage = () => {
                   quantity={quantity}
                   paymentMethod={paymentMethod}
                   width={50}
+                  price={finalPrice}
                 />
               </div>
             </div>
