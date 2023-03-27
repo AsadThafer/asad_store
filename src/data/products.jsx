@@ -1,3 +1,9 @@
+import xboxGamePassUltimateImage from "./productsImages/XboxGPU.jpg";
+import MineCraftImage from "./productsImages/MCBedRock.jpg";
+import psPlusImage from "./productsImages/PSPLUS.webp";
+import steamTRImage from "./productsImages/steam_turkey.jpg";
+import steamTRCreditImage from "./productsImages/SteamTL.jpg";
+
 const products = [
   {
     id: 1,
@@ -9,8 +15,7 @@ const products = [
     newprice: 210.0,
     rating: 5,
     onsale: true,
-    image:
-      "https://assets.xboxservices.com/assets/26/b8/26b87bdf-d6ca-446a-8fc9-a5fe6e6484fd.jpg?n=XGP_Image-0_Boxshot-Standard_XGP-Catalog_720x1080.jpg",
+    image: xboxGamePassUltimateImage,
     category: "1",
   },
   {
@@ -23,8 +28,7 @@ const products = [
     newprice: 250.0,
     rating: 4,
     onsale: true,
-    image:
-      "https://image.api.playstation.com/vulcan/ap/rnd/202205/1607/M7ryNMBbKxjWWqgswbKEvjfB.png?w=780&thumb=false",
+    image: psPlusImage,
     category: "1",
   },
 
@@ -38,8 +42,7 @@ const products = [
     newprice: 40.0,
     rating: 5,
     onsale: true,
-    image:
-      "https://media.karousell.com/media/photos/products/2022/2/21/steam_account_turkey_1645410489_8b9b4d62_progressive.jpg",
+    image: steamTRImage,
     category: "2",
   },
   {
@@ -49,8 +52,7 @@ const products = [
     note: "يرجى تحديد الكمية بناءا على الطلب البطاقات من مضاعفات ال50 ليرة .تواصل معنا لتزويدك بالسعر حسب الفئة المطلوبة",
     rating: 5,
     onsale: false,
-    image:
-      "https://cdn.cdkeys.com/700x700/media/catalog/product/t/z/tzyf8lak6qwynr4mlikvnryl_4_.jpg",
+    image: steamTRCreditImage,
     category: "3",
   },
   {
@@ -62,7 +64,7 @@ const products = [
     newprice: 115.0,
     rating: 4,
     onsale: true,
-    image: "https://i.ytimg.com/vi/qNMfF9TYETM/maxresdefault.jpg",
+    image: MineCraftImage,
     category: "4",
   },
 ];
