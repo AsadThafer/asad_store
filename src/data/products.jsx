@@ -59,7 +59,7 @@ const products = [
   },
   {
     id: 5,
-    name: "Minecraft: Java & Bedrock Edition",
+    name: "ماين كرافت : جافا و بدروك",
     description:
       "ابتكر ، استكشف ، ابق ، كرر. Minecraft: Java Edition و Bedrock Edition هما الآن صفقة شاملة لنظام Windows. Minecraft: يتيح لك إصدار Java & Bedrock الوصول إلى كلتا اللعبتين في عملية شراء واحدة وقاذفة موحدة واحدة ، مما يجعل الانتقال من إصدار إلى آخر أسهل من أي وقت مضى. العب مع أي لعبة Minecrafter ببساطة عن طريق التبديل إلى الإصدار الذي يمتلكه أصدقاؤك. يمكنك الآن الاستمتاع بضعف التعدين ومضاعفة الصناعة - مع عدد أكبر من Minecrafters أكثر من أي وقت مضى.",
     oldprice: 130.0,

@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import "./Product.css";
 const Product = ({ product }) => {
   const dumpimage = "https://dummyimage.com/450x300/dee2e6/6c757d.jpg";
   const { name, oldprice, image, id, rating, newprice, onsale } = product;
   return (
-    <div className="col mb-5" key={id}>
+    <div className="col padding-zero mb-5" key={id}>
       <div className="card h-100">
         {onsale && (
           <div
@@ -14,7 +15,7 @@ const Product = ({ product }) => {
           </div>
         )}
         <img
-          className="card-img-top img-fluid"
+          className="card-img-top img-fluid imgcard"
           src={image === "" ? dumpimage : image}
           alt={name}
           style={{
@@ -26,9 +27,9 @@ const Product = ({ product }) => {
           }}
         />
 
-        <div className="card-body p-4" style={{ fontSize: "0.9rem" }}>
+        <div className="card-body p-4 cardbody">
           <div className="text-center">
-            <h5 className="fw-bolder">{name}</h5>
+            <h5 className="fw-bolder cardtitle">{name}</h5>
             <div className="d-flex justify-content-center small text-warning mb-2">
               {[...Array(rating)].map((i) => {
                 return <div className="bi-star-fill" key={i} />;

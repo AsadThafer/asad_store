@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import products from "../../data/products.jsx";
 import paymentMethods from "../../data/paymentMethods.jsx";
 import WhatsAppButton from "../../Components/WhatsAppButton/WhatsAppButton.jsx";
+import "./ProductPage.css";
 
 const dumpimage = "https://dummyimage.com/450x300/dee2e6/6c757d.jpg";
 const ProductPage = () => {
@@ -120,7 +121,10 @@ const ProductPage = () => {
                   </div>
                 </div>
                 {paymentMethod.tax ? (
-                  <div className="alert alert-danger fw-bolder" role="alert">
+                  <div
+                    className="alert alert-danger fw-bolder tax-note"
+                    role="alert"
+                  >
                     {paymentMethod.taxrate} % عمولة زيادة على الرصيد الجوال
                     <br />
                     {product.newprice ? (
