@@ -28,7 +28,7 @@ const ProductPage = () => {
       {/* Product section*/}
       <section className="py-5">
         <div className="container px-4 px-lg-5 my-5">
-          <div className="row gx-4 gx-lg-5 align-items-center">
+          <div className="row gx-4 gx-lg-5 align-items-center bg-light">
             <div className="col-md-6">
               <img
                 className="card-img-top mb-5 mb-md-0"

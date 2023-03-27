@@ -1,12 +1,12 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Row, Col, Image } from "react-bootstrap";
 import logo from "../../data/logo.jpg";
 
 const About = () => {
   return (
     <div className="container px-4 px-lg-5 my-5">
       <Row>
-        <div className="container px-4 px-lg-5 my-5">
+        <div className="container px-4 px-lg-5 my-5 ">
           <div className="text-center text-black">
             <h1 className="display-4 fw-bolder">Asad's Store</h1>
             <p className="lead fw-normal text-black-50 mb-0">

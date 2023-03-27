@@ -17,10 +17,16 @@ const Product = ({ product }) => {
           className="card-img-top img-fluid"
           src={image === "" ? dumpimage : image}
           alt={name}
-          style={{ height: "320px", width: "268px", objectFit: "cover" }}
+          style={{
+            height: "320px",
+            width: "268px",
+            objectFit: "cover",
+            marginBottom: "1rem",
+            maxWidth: "100%",
+          }}
         />
 
-        <div className="card-body p-4">
+        <div className="card-body p-4" style={{ fontSize: "0.9rem" }}>
           <div className="text-center">
             <h5 className="fw-bolder">{name}</h5>
             <div className="d-flex justify-content-center small text-warning mb-2">
@@ -37,13 +43,15 @@ const Product = ({ product }) => {
           </div>
         </div>
         {/* Product actions*/}
-        <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
+        <div
+          className="card-footer p-4 pt-0 border-top-0 bg-transparent"
+          style={{ fontSize: "0.8rem" }}
+        >
           <div className="text-center">
             <Link
               className="btn btn-outline-dark mt-auto"
               to={`/product/${id}`}
             >
-              {" "}
               عرض الخيارات
             </Link>
           </div>

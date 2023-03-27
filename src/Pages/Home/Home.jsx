@@ -71,6 +71,12 @@ const Home = () => {
               value={searchTerm}
               onChange={handleChange}
               id="search"
+              style={{
+                fontSize: "1rem",
+                padding: "0.5rem",
+                width: "80%",
+                boxSizing: "border-box",
+              }}
             />
           </div>
           <div class="input-group mb-3 ">
@@ -87,6 +93,12 @@ const Home = () => {
               className="form-select text-center "
               aria-label="Default select example"
               onChange={updateCategory}
+              style={{
+                fontSize: "1rem",
+                padding: "0.5rem",
+                width: "80%",
+                boxSizing: "border-box",
+              }}
             >
               <option value={0} selected>
                 الكل
