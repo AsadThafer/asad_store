@@ -53,7 +53,7 @@ const Product = ({ product }) => {
               className="btn btn-outline-dark mt-auto"
               to={`/product/${id}`}
             >
-              عرض الخيارات
+              التفاصيل
             </Link>
           </div>
         </div>

@@ -78,9 +78,18 @@ const ProductPage = () => {
                       <input
                         className="form-control text-center me-3"
                         id="inputQuantity"
-                        type="num"
+                        type="number"
+                        min="1"
+                        max="100"
                         value={quantity}
-                        onChange={(e) => setQuantity(e.target.value)}
+                        onChange={(e) => {
+                          if (e.target.value > 0 && e.target.value < 101) {
+                            setQuantity(e.target.value);
+                          }
+                          if (e.target.value < 1) {
+                            setQuantity(1);
+                          }
+                        }}
                         style={{ maxWidth: "4rem" }}
                       />
                     </div>
