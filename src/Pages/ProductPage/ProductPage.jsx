@@ -38,14 +38,16 @@ const ProductPage = () => {
               <img
                 className="card-img-top mb-5 mb-md-0"
                 src={product.image ? product.image : dumpimage}
-                alt={product.name}
+                alt={product.name ? product.name : "قريبا"}
               />
             </div>
             <div className="col-md-6">
               <div className="small mb-1">
                 {product.code ? product.code : null}
               </div>
-              <h1 className="display-5 fw-bolder">{product.name}</h1>
+              <h1 className="display-5 fw-bolder">
+                {product.name ? product.name : "قريبا"}
+              </h1>
               <div className="fs-5 mb-5">
                 {product.oldprice ? (
                   <div className="text-decoration-line-through">
@@ -56,10 +58,12 @@ const ProductPage = () => {
               </div>
               {product.note ? (
                 <div className="alert alert-danger fw-bolder" role="alert">
-                  {product.note}
+                  {product.note ? product.note : "قيد الإنشاء"}
                 </div>
               ) : null}
-              <div className="lead">{product.description}</div>
+              <div className="lead">
+                {product.description ? product.description : "قيد الإنشاء"}
+              </div>
               <div className="d-flex flex-column">
                 <div>
                   <div className="row align-items-center">

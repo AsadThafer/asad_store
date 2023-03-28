@@ -16,8 +16,8 @@ const Product = ({ product }) => {
         )}
         <img
           className="card-img-top img-fluid imgcard"
-          src={image === "" ? dumpimage : image}
-          alt={name}
+          src={image ? image : dumpimage}
+          alt={name ? name : "قريبا"}
           style={{
             height: "320px",
             width: "268px",
@@ -29,12 +29,14 @@ const Product = ({ product }) => {
 
         <div className="card-body p-4 cardbody">
           <div className="text-center">
-            <h5 className="fw-bolder cardtitle">{name}</h5>
-            <div className="d-flex justify-content-center small text-warning mb-2">
-              {[...Array(rating)].map((i) => {
-                return <div className="bi-star-fill" key={i} />;
-              })}
-            </div>
+            <h5 className="fw-bolder cardtitle">{name ? name : "قريبا"}</h5>
+            {rating === 0 || null ? null : (
+              <div className="d-flex justify-content-center small text-warning mb-2">
+                {[...Array(rating)].map((i) => {
+                  return <div className="bi-star-fill" key={i} />;
+                })}
+              </div>
+            )}
             {oldprice ? (
               <div className="text-muted text-decoration-line-through">
                 {oldprice} ₪
