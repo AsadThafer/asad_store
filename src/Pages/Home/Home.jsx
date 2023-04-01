@@ -120,7 +120,7 @@ const Home = () => {
                 </h1>
                 <p className="lead fw-normal text-black-50 mb-0">
                   يرجى إعادة المحاولة مرة أخرى اذا لم تجد ما تبحث عنه يمكنك
-                  الاتصال بنا
+                  الاتصال بنا والطلب مباشرة
                 </p>
                 <WhatsAppButton width={100} />
               </div>

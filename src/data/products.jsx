@@ -13,7 +13,7 @@ const products = [
     note: `أن يكون حسابك منتهي/مخلص جميع الإشتراكات وان يكون خطة التجديد التلقائي الشهري مغلقة من اجل استخدام الاشتراك .
     هذه التعليمات مهمة للاستفادة من الإشتراك .. وعدم التزامك بها يعد مشكلة منك .. ونحن بخدمتك على الواتس اب اذا احتجت المساعدة ..`,
     oldprice: 280.0,
-    newprice: 210.0,
+    newprice: 220.0,
     rating: 5,
     onsale: true,
     image: xboxGamePassUltimateImage,
@@ -63,7 +63,7 @@ const products = [
     description:
       "ابتكر ، استكشف ، ابق ، كرر. Minecraft: Java Edition و Bedrock Edition هما الآن صفقة شاملة لنظام Windows. Minecraft: يتيح لك إصدار Java & Bedrock الوصول إلى كلتا اللعبتين في عملية شراء واحدة وقاذفة موحدة واحدة ، مما يجعل الانتقال من إصدار إلى آخر أسهل من أي وقت مضى. العب مع أي لعبة Minecrafter ببساطة عن طريق التبديل إلى الإصدار الذي يمتلكه أصدقاؤك. يمكنك الآن الاستمتاع بضعف التعدين ومضاعفة الصناعة - مع عدد أكبر من Minecrafters أكثر من أي وقت مضى.",
     oldprice: 130.0,
-    newprice: 115.0,
+    newprice: 110.0,
     rating: 4,
     onsale: true,
     image: MineCraftImage,

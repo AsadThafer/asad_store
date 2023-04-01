@@ -14,18 +14,20 @@ const Product = ({ product }) => {
             Sale
           </div>
         )}
-        <img
-          className="card-img-top img-fluid imgcard"
-          src={image ? image : dumpimage}
-          alt={name ? name : "قريبا"}
-          style={{
-            height: "320px",
-            width: "268px",
-            objectFit: "cover",
-            marginBottom: "1rem",
-            maxWidth: "100%",
-          }}
-        />
+        <Link to={`/product/${id}`} onClick={() => window.scrollTo(0, 0)}>
+          <img
+            className="card-img-top img-fluid imgcard"
+            src={image ? image : dumpimage}
+            alt={name ? name : "قريبا"}
+            style={{
+              height: "320px",
+              width: "268px",
+              objectFit: "cover",
+              marginBottom: "1rem",
+              maxWidth: "100%",
+            }}
+          />
+        </Link>
 
         <div className="card-body p-4 cardbody">
           <div className="text-center">
@@ -54,6 +56,7 @@ const Product = ({ product }) => {
             <Link
               className="btn btn-outline-dark mt-auto"
               to={`/product/${id}`}
+              onClick={() => window.scrollTo(0, 0)}
             >
               التفاصيل
             </Link>

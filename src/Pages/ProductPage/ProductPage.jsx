@@ -4,6 +4,7 @@ import products from "../../data/products.jsx";
 import paymentMethods from "../../data/paymentMethods.jsx";
 import WhatsAppButton from "../../Components/WhatsAppButton/WhatsAppButton.jsx";
 import "./ProductPage.css";
+import { Link } from "react-router-dom";
 
 const dumpimage = "https://dummyimage.com/450x300/dee2e6/6c757d.jpg";
 const ProductPage = () => {
@@ -39,6 +40,7 @@ const ProductPage = () => {
                 className="card-img-top mb-5 mb-md-0"
                 src={product.image ? product.image : dumpimage}
                 alt={product.name ? product.name : "قريبا"}
+                style={{ width: "460px", height: "460px", objectFit: "cover" }}
               />
             </div>
             <div className="col-md-6">
@@ -123,6 +125,7 @@ const ProductPage = () => {
                       >
                         {paymentMethods.map((paymentMethod) => (
                           <option
+                            className="text-center"
                             key={paymentMethod.id}
                             value={paymentMethod.id}
                           >
@@ -156,6 +159,11 @@ const ProductPage = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="text-center mt-5">
+          <Link className="btn btn-outline-dark m-auto " to={`/`}>
+            <i className="bi bi-arrow-left"></i> العودة للصفحة الرئيسية
+          </Link>
         </div>
       </section>
     </>
