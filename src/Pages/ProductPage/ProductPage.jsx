@@ -161,7 +161,13 @@ const ProductPage = () => {
           </div>
         </div>
         <div className="text-center mt-5">
-          <Link className="btn btn-outline-dark m-auto " to={`/`}>
+          <Link
+            className="btn btn-outline-dark m-auto "
+            to={`/`}
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
             <i className="bi bi-arrow-left"></i> العودة للصفحة الرئيسية
           </Link>
         </div>
