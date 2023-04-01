@@ -40,7 +40,6 @@ const ProductPage = () => {
                 className="card-img-top mb-5 mb-md-0"
                 src={product.image ? product.image : dumpimage}
                 alt={product.name ? product.name : "قريبا"}
-                style={{ width: "460px", height: "460px", objectFit: "cover" }}
               />
             </div>
             <div className="col-md-6">
