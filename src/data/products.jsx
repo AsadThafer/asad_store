@@ -4,6 +4,7 @@ import psPlusImage from "./productsImages/PSPLUS.webp";
 import steamTRImage from "./productsImages/steam_turkey.jpg";
 import steamTRCreditImage from "./productsImages/SteamTL.jpg";
 import canvaImage from "./productsImages/canva.jpg";
+import WWEImage from "./productsImages/WWE_2K22.jpg";
 
 const products = [
   {
@@ -81,6 +82,19 @@ const products = [
     onsale: true,
     image: canvaImage,
     category: "1",
+  },
+  {
+    id: 7,
+    name: " دبليو دبليو اي 2022 ديلوكس",
+    description:
+      "  دبليو دبليو اي 2022 ديلوكس للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة الديلوكس تحتوي على كل الاضافات والمحتويات الموجودة في النسخة العادية والمميزة بالاضافة الى الاضافات الجديدة والمحتويات الجديدة الموجودة في النسخة الديلوكس",
+    note: " اللعبة تعمل على الاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون, التفعيل عن طريق دخول الحساب (تقوم بزيونا بتزويدك بالحساب وكلمة المرور) ",
+    oldprice: 300.0,
+    newprice: 160.0,
+    rating: 5,
+    onsale: true,
+    image: WWEImage,
+    category: "4",
   },
 ];
 

@@ -2,7 +2,7 @@ const WhatsAppButton = (props) => {
   const sendonWhatsApp = () => {
     if (props.product && props.quantity && props.paymentMethod) {
       window.open(
-        `https://api.whatsapp.com/send?phone=972595681131&text= رابط العنصر : ${window.location.href}%0A%0A السلام عليكم ورحمة الله وبركاته%0A%0A أريد شراء ${props.product.name}  عدد  ${props.quantity}, بسعر ${props.price} %0A%0A وطريقة الدفع ${props.paymentMethod.name} %0A%0A مع تحياتي`
+        `https://api.whatsapp.com/send?phone=972595681131&text= رابط العنصر : ${window.location.href}%0A%0A السلام عليكم ورحمة الله وبركاته%0A%0A أريد شراء ${props.product.name}  عدد  ${props.quantity}, بسعر ${props.price} ₪ %0A%0A وطريقة الدفع ${props.paymentMethod.name} %0A%0A مع تحياتي`
       );
     } else {
       window.open(

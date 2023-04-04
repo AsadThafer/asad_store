@@ -37,7 +37,7 @@ const ProductPage = () => {
           <div className="row gx-4 gx-lg-5 align-items-center bg-light">
             <div className="col-md-6">
               <img
-                className="card-img-top mb-5 mb-md-0"
+                className="card-img-top mb-5 mb-md-0 imgcardpage"
                 src={product.image ? product.image : dumpimage}
                 alt={product.name ? product.name : "قريبا"}
               />
