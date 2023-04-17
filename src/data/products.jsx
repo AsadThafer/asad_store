@@ -19,6 +19,7 @@ const products = [
     onsale: true,
     image: xboxGamePassUltimateImage,
     category: "1",
+    platform: "Xbox One , Xbox Series X/S , PC",
   },
   {
     id: 2,
@@ -32,6 +33,7 @@ const products = [
     onsale: true,
     image: psPlusImage,
     category: "1",
+    platform: "PS4 , PS5",
   },
 
   {
@@ -46,6 +48,7 @@ const products = [
     onsale: true,
     image: steamTRImage,
     category: "2",
+    platform: "PC",
   },
 
   {
@@ -57,6 +60,7 @@ const products = [
     onsale: false,
     image: steamTRCreditImage,
     category: "3",
+    platform: "PC",
   },
   {
     id: 5,
@@ -69,6 +73,7 @@ const products = [
     onsale: true,
     image: MineCraftImage,
     category: "4",
+    platform: "Xbox One , Xbox Series X/S , PC",
   },
   {
     id: 6,
@@ -82,6 +87,7 @@ const products = [
     onsale: true,
     image: canvaImage,
     category: "1",
+    platform: "PC",
   },
   {
     id: 7,
@@ -95,6 +101,7 @@ const products = [
     onsale: true,
     image: WWEImage,
     category: "4",
+    platform: "Xbox One , Xbox Series X/S",
   },
 ];
 

@@ -57,6 +57,12 @@ const ProductPage = () => {
                 ) : null}
                 {product.newprice ? `${product.newprice} ₪` : null}
               </div>
+              {product.platform ? (
+                <div className="alert alert-primary fw-bolder" role="alert">
+                  المنصة :{" "}
+                  {product.platform ? product.platform : "غير محدد بعد"}
+                </div>
+              ) : null}
               {product.note ? (
                 <div className="alert alert-danger fw-bolder" role="alert">
                   {product.note ? product.note : "قيد الإنشاء"}
