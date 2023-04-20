@@ -128,15 +128,18 @@ const ProductPage = () => {
                           setPaymentMethod(paymentMethods[e.target.value - 1]);
                         }}
                       >
-                        {paymentMethods.map((paymentMethod) => (
-                          <option
-                            className="text-center"
-                            key={paymentMethod.id}
-                            value={paymentMethod.id}
-                          >
-                            {paymentMethod.name}
-                          </option>
-                        ))}
+                        {paymentMethods.map((paymentMethod) =>
+                          (product.newprice > 50) &
+                          (paymentMethod.id === 4) ? null : (
+                            <option
+                              className="text-center"
+                              key={paymentMethod.id}
+                              value={paymentMethod.id}
+                            >
+                              {paymentMethod.name}
+                            </option>
+                          )
+                        )}
                       </select>
                     </div>
                   </div>
@@ -146,7 +149,7 @@ const ProductPage = () => {
                     className="alert alert-danger fw-bolder tax-note"
                     role="alert"
                   >
-                    {paymentMethod.taxrate} % عمولة زيادة على الرصيد الجوال
+                    {paymentMethod.taxrate} % عمولة زيادة
                     <br />
                     {product.newprice ? (
                       <>السعر النهائي : {finalPrice}₪</>

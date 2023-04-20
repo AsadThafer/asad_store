@@ -20,6 +20,17 @@ const paymentMethods = [
     tax: true,
     taxrate: 10,
   },
+  {
+    id: 5,
+    name: "بالباي - فلسطين",
+    tax: false,
+  },
+  {
+    id: 6,
+    name: "باي بال",
+    tax: true,
+    taxrate: 3,
+  },
 ];
 
 export default paymentMethods;

@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import "./Product.css";
 const Product = ({ product }) => {
   const dumpimage = "https://dummyimage.com/450x300/dee2e6/6c757d.jpg";
-  const { name, oldprice, image, id, rating, newprice, onsale } = product;
+  const { name, oldprice, image, id, rating, newprice, onsale, platform } =
+    product;
   return (
     <div className="col padding-zero mb-5" key={id}>
       <div className="card h-100">
@@ -53,6 +54,15 @@ const Product = ({ product }) => {
           style={{ fontSize: "0.8rem" }}
         >
           <div className="text-center">
+            {platform ? (
+              <div
+                className="alert alert-primary fw-bolder"
+                role="alert"
+                style={{ fontSize: "smaller" }}
+              >
+                {platform}
+              </div>
+            ) : null}
             <Link
               className="btn btn-outline-dark mt-auto"
               to={`/product/${id}`}
