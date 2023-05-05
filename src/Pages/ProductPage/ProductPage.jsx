@@ -47,6 +47,17 @@ const ProductPage = () => {
             property="og:image"
             content={product.image ? product.image : logo}
           />
+          <meta
+            property="og:title"
+            content={product.name + " | Asad's Store "}
+          />
+          <meta property="og:url" content={window.location.href} />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:description"
+            content={product.description + `Asad's Store `}
+          />
+          <meta property="og:site_name" content="Asad's Store" />
         </Helmet>
 
         <div className="container px-4 px-lg-5 my-5">
