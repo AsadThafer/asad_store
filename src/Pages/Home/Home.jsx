@@ -3,12 +3,13 @@ import "./Home.css";
 import Product from "../../Components/Product/Product.jsx";
 import products from "../../data/products.jsx";
 import categories from "../../data/categories";
+import { Helmet } from "react-helmet";
 import WhatsAppButton from "../../Components/WhatsAppButton/WhatsAppButton.jsx";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-  const [category, setCategory] = useState(0);
+  const [category, setCategory] = useState("0");
 
   const updateCategory = (event) => {
     setCategory(event.target.value);
@@ -19,24 +20,19 @@ const Home = () => {
   };
   useEffect(() => {
     const results = products.filter((product) => {
-      // eslint-disable-next-line eqeqeq
-      if (category == 0 && searchTerm === "") {
-        return product.name.toLowerCase().includes(searchTerm);
+      if (category !== "0" && product.category !== category) {
+        return false;
       }
-      // eslint-disable-next-line eqeqeq
-      if (category == 0 && searchTerm != "") {
-        return product.name.toLowerCase().includes(searchTerm);
+      if (
+        searchTerm &&
+        !(
+          product.name.toLowerCase().includes(searchTerm) ||
+          product.platform.toLowerCase().includes(searchTerm)
+        )
+      ) {
+        return false;
       }
-      // eslint-disable-next-line eqeqeq
-      if (category != 0 && searchTerm == "") {
-        return product.category === category;
-      }
-
-      return (
-        // eslint-disable-next-line eqeqeq
-        product.category == category &&
-        product.name.toLowerCase().includes(searchTerm)
-      );
+      return true;
     });
     setSearchResults(results);
   }, [searchTerm, category]);
@@ -44,6 +40,13 @@ const Home = () => {
   return (
     <>
       <header className="bg-dark py-5">
+        <Helmet>
+          <title>الرئيسية - Asad's Store</title>
+          <meta
+            name="description"
+            content="Website for Asad's Store , Where you can find Gaming Subscriptions , Gaming Accounts , and many more."
+          />
+        </Helmet>
         <div className="container px-4 px-lg-5 my-5">
           <div className="text-center text-white">
             <h1 className="display-4 fw-bolder">Shop for Games</h1>
@@ -63,7 +66,7 @@ const Home = () => {
                 className="input-group-text"
                 id="inputGroup-sizing-default"
               >
-                ابحث عن منتج
+                ابحث عن عنصر
               </label>
             </div>
             <input
@@ -73,6 +76,7 @@ const Home = () => {
               aria-describedby="inputGroup-sizing-default"
               value={searchTerm}
               onChange={handleChange}
+              placeholder="ابحث عن عنصر بالاسم أو المنصة"
               id="search"
               style={{
                 fontSize: "1rem",
@@ -104,7 +108,7 @@ const Home = () => {
                 defaultValue: 0,
               }}
             >
-              <option value={0}>الكل</option>
+              <option value="0">الكل</option>
               {categories.map((category) => (
                 <option key={category.id} value={category.id}>
                   {category.name}

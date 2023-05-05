@@ -1,10 +1,15 @@
 import React from "react";
 import { Row, Col, Image } from "react-bootstrap";
 import logo from "../../data/logo.png";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
     <div className="container px-4 px-lg-5 my-5">
+      <Helmet>
+        <title>حول المتجر - Asad's Store</title>
+        <meta name="description" content="حول المتجر" />
+      </Helmet>
       <Row>
         <div className="container px-4 px-lg-5 my-5 ">
           <div className="text-center text-black">

@@ -6,7 +6,11 @@ import WhatsAppButton from "../../Components/WhatsAppButton/WhatsAppButton.jsx";
 import "./ProductPage.css";
 import { Link } from "react-router-dom";
 
-const dumpimage = "https://dummyimage.com/450x300/dee2e6/6c757d.jpg";
+import { Helmet } from "react-helmet";
+
+import logo from "../../data/logo.png";
+
+const dumpimage = logo;
 const ProductPage = () => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
@@ -33,6 +37,18 @@ const ProductPage = () => {
     <>
       {/* Product section*/}
       <section className="py-5">
+        <Helmet>
+          <title>{product.name ? product.name : "قريبا"}</title>
+          <meta
+            name="description"
+            content={product.description ? product.description : "قيد الإنشاء"}
+          />
+          <meta
+            property="og:image"
+            content={product.image ? product.image : logo}
+          />
+        </Helmet>
+
         <div className="container px-4 px-lg-5 my-5">
           <div className="row gx-4 gx-lg-5 align-items-center bg-light">
             <div className="col-md-6">
