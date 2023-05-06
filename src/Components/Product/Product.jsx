@@ -19,6 +19,7 @@ const Product = ({ product }) => {
           <img
             className="card-img-top img-fluid imgcard"
             src={image ? image : dumpimage}
+            loading="lazy"
             alt={name ? name : "قريبا"}
             style={{
               height: "320px",

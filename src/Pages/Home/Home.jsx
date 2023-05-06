@@ -76,7 +76,7 @@ const Home = () => {
               aria-describedby="inputGroup-sizing-default"
               value={searchTerm}
               onChange={handleChange}
-              placeholder="ابحث عن عنصر بالاسم أو المنصة"
+              placeholder="بالاسم او المنصة"
               id="search"
               style={{
                 fontSize: "1rem",
