@@ -27,7 +27,7 @@ const Home = () => {
         searchTerm &&
         !(
           product.name.toLowerCase().includes(searchTerm) ||
-          product.platform.toLowerCase().includes(searchTerm)
+          product.platform.toLowerCase().includes(searchTerm.toLowerCase())
         )
       ) {
         return false;
