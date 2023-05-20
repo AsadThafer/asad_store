@@ -62,6 +62,13 @@ const ProductPage = () => {
 
         <div className="container px-4 px-lg-5 my-5">
           <div className="row gx-4 gx-lg-5 align-items-center bg-light">
+            <div className="small mb-1">
+              {product.code ? product.code : null}
+            </div>
+            <h1 className="display-5 fw-bolder text-center mb-5 mt-1">
+              {product.name ? product.name : "قريبا"}
+            </h1>
+
             <div className="col-md-6">
               <img
                 className="card-img-top mb-5 mb-md-0 imgcardpage"
@@ -70,20 +77,6 @@ const ProductPage = () => {
               />
             </div>
             <div className="col-md-6">
-              <div className="small mb-1">
-                {product.code ? product.code : null}
-              </div>
-              <h1 className="display-5 fw-bolder">
-                {product.name ? product.name : "قريبا"}
-              </h1>
-              <div className="fs-5 mb-5">
-                {product.oldprice ? (
-                  <div className="text-decoration-line-through">
-                    {product.oldprice} ₪
-                  </div>
-                ) : null}
-                {product.newprice ? `${product.newprice} ₪` : null}
-              </div>
               {product.platform ? (
                 <div className="alert alert-primary fw-bolder" role="alert">
                   المنصة :{" "}
@@ -95,6 +88,7 @@ const ProductPage = () => {
                   {product.note ? product.note : "قيد الإنشاء"}
                 </div>
               ) : null}
+
               <div className="lead">
                 {product.description ? product.description : "قيد الإنشاء"}
               </div>
@@ -171,18 +165,19 @@ const ProductPage = () => {
                     </div>
                   </div>
                 </div>
-                {paymentMethod.tax ? (
-                  <div
-                    className="alert alert-danger fw-bolder tax-note"
-                    role="alert"
-                  >
-                    {paymentMethod.taxrate} % عمولة زيادة
-                    <br />
-                    {product.newprice ? (
-                      <>السعر النهائي : {finalPrice}₪</>
-                    ) : null}
-                  </div>
-                ) : null}
+
+                <div
+                  className="alert alert-danger fw-bolder tax-note"
+                  role="alert"
+                >
+                  {paymentMethod.taxrate ? (
+                    <div>
+                      <div>عمولة زيادة : {paymentMethod.taxrate}% </div>
+                    </div>
+                  ) : null}
+
+                  {product.newprice ? <>السعر النهائي : {finalPrice}₪</> : null}
+                </div>
 
                 <WhatsAppButton
                   product={product}
@@ -194,6 +189,33 @@ const ProductPage = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="container px-4 px-lg-5 my-5">
+          {product.relatedProducts ? (
+            <div
+              className="alert alert-warning fw-bolder text-center m-auto"
+              role="alert"
+            >
+              {product.relatedProducts ? (
+                <>
+                  <> قد يعجبك أيضا : </> <br />
+                  {product.relatedProducts.map((relatedProduct) => (
+                    <Link
+                      to={`/product/${relatedProduct}`}
+                      className="text-decoration-none"
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      <div className="badge bg-warning text-dark me-2 mt-2 ">
+                        {`${products[relatedProduct - 1].name}`}
+                      </div>
+                    </Link>
+                  ))}
+                </>
+              ) : null}
+            </div>
+          ) : null}
         </div>
         <div className="text-center mt-5">
           <Link

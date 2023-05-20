@@ -10,6 +10,10 @@ import CupheadImage from "./productsImages/CUPheadpackage.png";
 import Injustice2Image from "./productsImages/Injustice2Image.webp";
 import EuroTrucksim2Image from "./productsImages/Eurotrucksim2.webp";
 import CODMW2Image from "./productsImages/COD_MW2.jpg";
+import CODBO3ZChrImage from "./productsImages/callofdutyblackops3zchro.jpg";
+import CODBO3ZDelImage from "./productsImages/codbo3zde.png";
+import CODAWProImage from "./productsImages/CODAWPro.webp";
+import CODGhostsHardenedImage from "./productsImages/CODGhostsHardened.webp";
 
 const products = [
   {
@@ -55,6 +59,7 @@ const products = [
     image: steamTRImage,
     category: "2",
     platform: "PC",
+    relatedProducts: [4],
   },
 
   {
@@ -67,6 +72,7 @@ const products = [
     image: steamTRCreditImage,
     category: "3",
     platform: "PC",
+    relatedProducts: [3],
   },
   {
     id: 5,
@@ -178,6 +184,67 @@ const products = [
     onsale: true,
     category: "4",
     platform: "Xbox One , Xbox Series X/S",
+    relatedProducts: [14, 15, 16],
+  },
+  {
+    id: 13,
+    name: "كول اوف ديوتي بلاك اوبس 3  - زومبي كرونيكلز",
+    description:
+      "كول اوف ديوتي بلاك اوبس 3  - زومبي كرونيكلز للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة الكرونيكلز تحتوي على اللعبة كاملة و إضافة زومبي كرونيكلز وهي اضافة تحتوي على 8 خرائط زومبي من الاجزاء السابقة",
+    note: " اللعبة تعمل على الاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون, التفعيل عن طريق دخول الحساب (تقوم بتزويدنا بالحساب وكلمة المرور الخاص بك) ",
+    oldprice: 290.0,
+    newprice: 120.0,
+    rating: 5,
+    onsale: true,
+    image: CODBO3ZChrImage,
+    category: "4",
+    platform: "Xbox One , Xbox Series X/S",
+    relatedProducts: [14, 12, 15, 16],
+  },
+  {
+    id: 14,
+    name: "كول اوف ديوتي بلاك اوبس 3  -  زومبي ديلوكس",
+    description:
+      "كول اوف ديوتي بلاك اوبس 3  - زومبي ديلوكس للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة الديلوكس تحتوي على اللعبة كاملة و إضافة زومبي كرونيكلز و هي إضافة تحتوي على 8 خرائط زومبي من الاجزاء السابقة بالإضافة الى السيزون باس الذي يحتوى على جميع الإضافات الاخرى و الخرائط للمالتيبلاير و الزومبي",
+    note: "  اللعبة تعمل على الاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون, التفعيل عن طريق دخول الحساب (تقوم بتزويدنا بالحساب وكلمة المرور الخاص بك) و يجب ان يكون لديك اشتراك اكسبوكس لايف جولد لتتمكن من اللعب اونلاين",
+    oldprice: 360.0,
+    newprice: 150.0,
+    rating: 5,
+    onsale: true,
+    image: CODBO3ZDelImage,
+    category: "4",
+    platform: "Xbox One , Xbox Series X/S",
+    relatedProducts: [13, 12, 15, 16],
+  },
+  {
+    id: 15,
+    name: "كول اوف ديوتي ادفانسد وورفير - ديجيتال برو اديشن",
+    description:
+      "كول اوف ديوتي ادفانسد وورفير - ديجيتال برو اديشن للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة الديجيتال برو اديشن تحتوي على اللعبة كاملة و السيزون باس الذي يحتوى على جميع الإضافات الاخرى و الخرائط للمالتيبلاير و الزومبي",
+    note: "  اللعبة تعمل على الاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون, التفعيل عن طريق دخول الحساب (تقوم بتزويدنا بالحساب وكلمة المرور الخاص بك) و يجب ان يكون لديك اشتراك اكسبوكس لايف جولد لتتمكن من اللعب اونلاين",
+    oldprice: 360.0,
+    newprice: 100.0,
+    rating: 5,
+    onsale: true,
+    image: CODAWProImage,
+    category: "4",
+    platform: "Xbox One , Xbox Series X/S",
+    relatedProducts: [16, 14, 12],
+  },
+  {
+    id: 16,
+    name: "كول اوف ديوتي جوستس  - ديجيتال هارينيد اديشن",
+    description:
+      "كول اوف ديوتي جوستس  - ديجيتال هارينيد اديشن للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة الديجيتال هارينيد اديشن تحتوي على اللعبة كاملة و السيزون باس الذي يحتوى على جميع الإضافات الاخرى و الخرائط للمالتيبلاير و الزومبي",
+    note: "  اللعبة تعمل على الاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون, التفعيل عن طريق دخول الحساب (تقوم بتزويدنا بالحساب وكلمة المرور الخاص بك) و يجب ان يكون لديك اشتراك اكسبوكس لايف جولد لتتمكن من اللعب اونلاين",
+    oldprice: 360.0,
+    newprice: 80.0,
+    rating: 5,
+    onsale: true,
+    image: CODGhostsHardenedImage,
+    category: "4",
+    platform: "Xbox One , Xbox Series X/S",
+    relatedProducts: [15, 14, 12],
   },
 ];
 
