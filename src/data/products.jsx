@@ -14,12 +14,13 @@ import CODBO3ZChrImage from "./productsImages/callofdutyblackops3zchro.jpg";
 import CODBO3ZDelImage from "./productsImages/codbo3zde.png";
 import CODAWProImage from "./productsImages/CODAWPro.webp";
 import CODGhostsHardenedImage from "./productsImages/CODGhostsHardened.webp";
+import courseHeroImage from "./productsImages/coursehero_logo.webp";
 
 const products = [
   {
     id: 1,
-    name: "اشتراك اكسبوكس جيم باس التيمت 13 شهر",
-    description: "13 شهرًا من بطاقة ألعاب Xbox  حيث يمكنك لعب أكثر من 100 لعبة",
+    name: "اشتراك اكسبوكس جيم باس التيمت 9 شهور",
+    description: "9 شهرًا من بطاقة ألعاب Xbox  حيث يمكنك لعب أكثر من 100 لعبة",
     note: `أن يكون حسابك منتهي/مخلص جميع الإشتراكات وان يكون خطة التجديد التلقائي الشهري مغلقة من اجل استخدام الاشتراك .
     هذه التعليمات مهمة للاستفادة من الإشتراك .. وعدم التزامك بها يعد مشكلة منك .. ونحن بخدمتك على الواتس اب اذا احتجت المساعدة ..
     التفعيل عن طريق دخول الحساب (تقوم بتزويدنا بالحساب وكلمة المرور الخاص بك ونقوم بتفعيل الاشتراك لك)`,
@@ -100,6 +101,7 @@ const products = [
     image: canvaImage,
     category: "1",
     platform: "PC",
+    relatedProducts: [17],
   },
   {
     id: 7,
@@ -245,6 +247,21 @@ const products = [
     category: "4",
     platform: "Xbox One , Xbox Series X/S",
     relatedProducts: [15, 14, 12],
+  },
+  {
+    id: 17,
+    name: "كورس هيرو - بريميوم",
+    note: "غير مكفول الحساب , يتم تزويدك بالحساب وكلمة المرور الخاصة بكورس هيرو بريميوم لمدة 12 شهر , يمكنك تغيير البيانات الخاصة بالحساب بعد تسليمه لك",
+    description:
+      "كورس هيرو بريميوم هو موقع تعليمي يحتوي على ميزات مثل رفع الاسئله و ايجاد الاجابات لاسئله متوفره مسبقا الاشتراك يحتوي على 40 سؤال رفع و 30 سؤال فتح",
+    oldprice: 60.0,
+    newprice: 35.0,
+    rating: 5,
+    onsale: true,
+    image: courseHeroImage,
+    category: "2",
+    platform: "PC",
+    relatedProducts: [6],
   },
 ];
 

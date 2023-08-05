@@ -31,6 +31,11 @@ const paymentMethods = [
     tax: true,
     taxrate: 3,
   },
+  {
+    id: 7,
+    name: "محفظة ريفلكت",
+    tax: false,
+  },
 ];
 
 export default paymentMethods;
