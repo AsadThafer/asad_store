@@ -15,6 +15,7 @@ import CODBO3ZDelImage from "./productsImages/codbo3zde.png";
 import CODAWProImage from "./productsImages/CODAWPro.webp";
 import CODGhostsHardenedImage from "./productsImages/CODGhostsHardened.webp";
 import courseHeroImage from "./productsImages/coursehero_logo.webp";
+import cheggImage from "./productsImages/chegglogo.png";
 
 const products = [
   {
@@ -71,7 +72,7 @@ const products = [
     rating: 5,
     onsale: false,
     image: steamTRCreditImage,
-    category: "3",
+    category: "5",
     platform: "PC",
     relatedProducts: [3],
   },
@@ -101,7 +102,7 @@ const products = [
     image: canvaImage,
     category: "1",
     platform: "PC",
-    relatedProducts: [17],
+    relatedProducts: [17, 18],
   },
   {
     id: 7,
@@ -259,9 +260,24 @@ const products = [
     rating: 5,
     onsale: true,
     image: courseHeroImage,
-    category: "2",
+    category: "3",
     platform: "PC",
-    relatedProducts: [6],
+    relatedProducts: [6, 18],
+  },
+  {
+    id: 18,
+    name: "تشيج - بريميوم",
+    note: " غير مكفول الحساب , يتم تزويدك بالحساب وكلمة المرور الخاصة بتشيج بريميوم لمدة شهر , يمكنك تغيير البيانات الخاصة بالحساب بعد تسليمه لك و يعمل على جهازين كحد أقصى , قد يعمل ليوم او اسبوع او شهر او اكثر حسب الحظ",
+    description:
+      "  تشيج بريميوم هو موقع تعليمي يحتوي على ميزات مثل رفع الاسئله و ايجاد الاجابات لاسئله متوفره مسبقا الاشتراك يحتوي على 20 سؤال رفع و فتح غير محدود للأسئلة المحلولة مسبقا",
+    oldprice: 30.0,
+    newprice: 20.0,
+    rating: 5,
+    onsale: true,
+    image: cheggImage,
+    category: "3",
+    platform: "PC",
+    relatedProducts: [17, 6],
   },
 ];
 

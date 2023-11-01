@@ -9,7 +9,7 @@ const categories = [
   },
   {
     id: 3,
-    name: " بطاقات رصيد ",
+    name: " حسابات تعليمية ",
   },
   {
     id: 4,
@@ -17,6 +17,11 @@ const categories = [
   },
   {
     id: 5,
+    name: " بطاقات رصيد ",
+  },
+
+  {
+    id: 6,
     name: " أخرى ",
   },
 ];
