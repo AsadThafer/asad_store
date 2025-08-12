@@ -6,7 +6,7 @@ const Footer = () => {
         <p className="m-0 text-center text-white">
           جميع حقوق الطبع و النشر محفوظة
         </p>
-        <p className="m-0 text-center text-white">© Asad's Store 2023</p>
+        <p className="m-0 text-center text-white"> Asad's Store 2020 - {new Date().getFullYear()} ©</p>
         <div className="m-0 text-center text-white d-flex flex-row-reverse justify-content-center">
           <Link
             to="https://www.facebook.com/AsadGamerStore"

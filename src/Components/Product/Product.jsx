@@ -7,12 +7,12 @@ const Product = ({ product }) => {
   return (
     <div className="col padding-zero mb-5" key={id}>
       <div className="card h-100">
-        {onsale && (
+        {onsale && product.available !== false && (
           <div
             className="badge bg-dark text-white position-absolute"
             style={{ top: "0.5rem", right: "0.5rem" }}
           >
-            Sale
+            on Sale
           </div>
         )}
         <Link to={`/product/${id}`} onClick={() => window.scrollTo(0, 0)}>
@@ -65,11 +65,13 @@ const Product = ({ product }) => {
               </div>
             ) : null}
             <Link
-              className="btn btn-outline-dark mt-auto"
+              className={`btn btn-outline-dark mt-auto ${
+                product.available === false ? "text-danger" : ""
+              }`}
               to={`/product/${id}`}
               onClick={() => window.scrollTo(0, 0)}
             >
-              التفاصيل
+              {product.available === false ? "غير متوفر" : "التفاصيل"}
             </Link>
           </div>
         </div>

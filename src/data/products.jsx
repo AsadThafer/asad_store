@@ -4,14 +4,14 @@ import psPlusImage from "./productsImages/PSPLUS.webp";
 import steamTRImage from "./productsImages/steam_turkey.jpg";
 import steamTRCreditImage from "./productsImages/SteamTL.jpg";
 import canvaImage from "./productsImages/canva.jpg";
-import WWEImage from "./productsImages/WWE_2K22.jpg";
+import WWEImage from "./productsImages/WWE_2K25.jpg";
 import SOTImage from "./productsImages/Sea_of_Thieves.webp";
 import CupheadImage from "./productsImages/CUPheadpackage.png";
 import Injustice2Image from "./productsImages/Injustice2Image.webp";
 import EuroTrucksim2Image from "./productsImages/Eurotrucksim2.webp";
-import CODMW2Image from "./productsImages/COD_MW2.jpg";
+import CODMW3Image from "./productsImages/COD_MW3.jpg";
 import CODBO3ZChrImage from "./productsImages/callofdutyblackops3zchro.jpg";
-import CODBO3ZDelImage from "./productsImages/codbo3zde.png";
+import GTAVPreImage from "./productsImages/GTA_V_Prem.jpg";
 import CODAWProImage from "./productsImages/CODAWPro.webp";
 import CODGhostsHardenedImage from "./productsImages/CODGhostsHardened.webp";
 import courseHeroImage from "./productsImages/coursehero_logo.webp";
@@ -20,13 +20,13 @@ import cheggImage from "./productsImages/chegglogo.png";
 const products = [
   {
     id: 1,
-    name: "اشتراك اكسبوكس جيم باس التيمت 9 شهور",
-    description: "9 شهرًا من بطاقة ألعاب Xbox  حيث يمكنك لعب أكثر من 100 لعبة",
+    name: "اشتراك اكسبوكس جيم باس التيمت 13 شهر",
+    description: "13 شهرًا من بطاقة ألعاب Xbox  حيث يمكنك لعب أكثر من 100 لعبة",
     note: `أن يكون حسابك منتهي/مخلص جميع الإشتراكات وان يكون خطة التجديد التلقائي الشهري مغلقة من اجل استخدام الاشتراك .
     هذه التعليمات مهمة للاستفادة من الإشتراك .. وعدم التزامك بها يعد مشكلة منك .. ونحن بخدمتك على الواتس اب اذا احتجت المساعدة ..
-    التفعيل عن طريق دخول الحساب (تقوم بتزويدنا بالحساب وكلمة المرور الخاص بك ونقوم بتفعيل الاشتراك لك)`,
-    oldprice: 280.0,
-    newprice: 220.0,
+    `,
+    oldprice: 300.0,
+    newprice: 275.0,
     rating: 5,
     onsale: true,
     image: xboxGamePassUltimateImage,
@@ -35,12 +35,13 @@ const products = [
   },
   {
     id: 2,
-    name: "اشتراك بلايستيشن بلس 365 يوم امريكي",
+    name: " اشتراك بلايستيشن بلس 365 يوم - الباقة الاساسية",
     description: `Playstation Plus هو النوع الآخر من بطاقات هدايا PS التي يمكنك العثور عليها في مجموعتنا. PS Plus هي خدمة اشتراك توفر للاعبين الكثير من الفوائد. قبل كل شيء ، يتيح لك الوصول إلى اللاعبين المتعددين عبر الإنترنت ، بحيث يمكنك مشاركة المرح مع أصدقائك واللاعبين في جميع أنحاء العالم.
 
     خصومات PS Store الحصرية ولعبتين مجانيتين شهريًا هي مزايا أخرى جديرة بالذكر. علاوة على ذلك ، هناك مجموعة PlayStation Plus مليئة بأكثر الكتب مبيعًا من Sony والتي يمكن لمشتركي PS Plus الذين يمتلكون PS5 تشغيلها مجانًا. أن نكون صادقين ، القائمة رائعة للغاية. وهي تشمل God of War و Days Gone و Detroit: Become Human و Uncharted 4: A Thief's End والعديد من الألقاب الشهيرة الأخرى. `,
-    oldprice: 300.0,
-    newprice: 250.0,
+    note: " يرجى ملاحظة أن هذه الباقة هي الباقة الأساسية فقط ولا تشمل أي محتوى إضافي. تفعيل الإشتراك في حسابك الخاص ويكون دولة حسابك دولة تركية فقط",
+    oldprice: 305.0,
+    newprice: 240.0,
     rating: 4,
     onsale: true,
     image: psPlusImage,
@@ -55,7 +56,7 @@ const products = [
       "حسابات Steam التي نبيعها هي مناطق عشوائية في تركيا بشكل افتراضي لذلك ، يرجى عدم استخدام عملتك المحلية لشراء أي شيء على حساب Steam ، وإلا فإننا لن نكون مسؤولين عن الحظر الرسمي الناجم ، آمل أن تتمكن من فهم ذلك ،  شكرًا لك",
     note: "البريد الإلكتروني الأصلي + الوصول الكامل + 0 ألعاب ، اتصل بنا للحصول على بطاقات رصيد تركيا",
     oldprice: 50.0,
-    newprice: 40.0,
+    newprice: 35.0,
     rating: 5,
     onsale: true,
     image: steamTRImage,
@@ -102,27 +103,29 @@ const products = [
     image: canvaImage,
     category: "1",
     platform: "PC",
-    relatedProducts: [17, 18],
+    available: false, // This product is currently not available
   },
   {
     id: 7,
-    name: " دبليو دبليو اي 2022 - ديلوكس اديشن",
+    name: " دبليو دبليو اي 2025 - ستاندرد اديشن",
     description:
-      "  دبليو دبليو اي 2022 ديلوكس للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة الديلوكس تحتوي على كل الاضافات والمحتويات الموجودة في النسخة العادية والمميزة بالاضافة الى الاضافات الجديدة والمحتويات الجديدة الموجودة في النسخة الديلوكس",
+      "  دبليو دبليو اي 2025 ستاندرد للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة ستاندرد",
     note: " اللعبة تعمل على الاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون, التفعيل عن طريق دخول الحساب (تقوم بتزويدنا بالحساب وكلمة المرور الخاص بك) ",
     oldprice: 300.0,
-    newprice: 160.0,
+    newprice: 200.0,
     rating: 5,
     onsale: true,
     image: WWEImage,
     category: "4",
     platform: "Xbox One , Xbox Series X/S",
+    available: true,
+    relatedProducts: [8],
   },
   {
     id: 8,
-    name: "  سي اوف ثيفز - ديلوكس اديشن",
+    name: "  سي اوف ثيفز - 2025 اديشن",
     description:
-      "  سي اوف ثيفز ديلوكس للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة الديلوكس تحتوي على كل الاضافات والمحتويات الموجودة في النسخة العادية والمميزة بالاضافة الى الاضافات الجديدة والمحتويات الجديدة الموجودة في النسخة الديلوكس",
+      "  سي اوف ثيفز - 2025 اديشن للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة تحتوي على كل الاضافات والمحتويات الموجودة في النسخة العادية والمميزة بالاضافة الى الاضافات الجديدة والمحتويات الجديدة الموجودة في النسخة",
     note: " اللعبة تعمل على الاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون, التفعيل عن طريق دخول الحساب (تقوم بتزويدنا بالحساب وكلمة المرور الخاص بك) ",
     oldprice: 180.0,
     newprice: 80.0,
@@ -138,8 +141,8 @@ const products = [
     description:
       "كب هيد بكج النسخة الكاملة للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة الكاملة تحتوي على كل الاضافات والمحتويات الموجودة في النسخة العادية والمميزة بالاضافة الى الاضافات الجديدة والمحتويات الجديدة الموجودة في النسخة الكاملة",
     note: " اللعبة تعمل على الاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون, التفعيل عن طريق دخول الحساب (تقوم بتزويدنا بالحساب وكلمة المرور الخاص بك) ",
-    oldprice: 200.0,
-    newprice: 100.0,
+    oldprice: 100.0,
+    newprice: 60.0,
     rating: 5,
     onsale: true,
     image: CupheadImage,
@@ -148,12 +151,12 @@ const products = [
   },
   {
     id: 10,
-    name: "انجستيس 2 - ليجيندري اديشن",
+    name: "انجستيس 2 + مورتال كومبات 11 - ليجيندري اديشن",
     description:
-      "انجستس 2 - ليجيندري اديشن للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة الليجيندري تحتوي على كل الاضافات والمحتويات الموجودة في النسخة العادية والمميزة بالاضافة الى الاضافات الجديدة والمحتويات الجديدة الموجودة في النسخة الليجيندري",
+      "انجستس 2  + مورتال كومبات 11 - ليجيندري اديشن للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة الليجيندري تحتوي على كل الاضافات والمحتويات الموجودة في النسخة العادية والمميزة بالاضافة الى الاضافات الجديدة والمحتويات الجديدة الموجودة في النسخة الليجيندري",
     note: " اللعبة تعمل على الاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون, التفعيل عن طريق دخول الحساب (تقوم بتزويدنا بالحساب وكلمة المرور الخاص بك) ",
     oldprice: 220.0,
-    newprice: 90.0,
+    newprice: 120.0,
     rating: 5,
     onsale: true,
     image: Injustice2Image,
@@ -166,8 +169,8 @@ const products = [
     description:
       "يورو تراك سيميولاتور 2 ستيم - النسخة العادية , اللعبة تعمل على الحاسب الشخصي , التفعيل عن طريق ارسال الكود الخاص باللعبة",
     note: "اللعبة تعمل على الحاسب الشخصي , التفعيل عن طريق ارسال الكود الخاص باللعبة",
-    oldprice: 80.0,
-    newprice: 60.0,
+    oldprice: 100.0,
+    newprice: 85.0,
     rating: 5,
     onsale: true,
     image: EuroTrucksim2Image,
@@ -176,13 +179,13 @@ const products = [
   },
   {
     id: 12,
-    image: CODMW2Image,
-    name: "كول اوف ديوتي مودرن وورفير 2 - كروس جين",
+    image: CODMW3Image,
+    name: "كول اوف ديوتي مودرن وورفير 3 - كروس جين",
     description:
-      "كول اوف ديوتي مودرن وورفير 2 كروس جين للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة الكروس جين تحتوي على نسختين لتعمل على كل من اكسبوكس ون و اكسبوكس سيريس اس و اكس",
+      "كول اوف ديوتي مودرن وورفير 3 كروس جين للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة الكروس جين تحتوي على نسختين لتعمل على كل من اكسبوكس ون و اكسبوكس سيريس اس و اكس",
     note: " اللعبة تعمل على الاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون, التفعيل عن طريق دخول الحساب (تقوم بتزويدنا بالحساب وكلمة المرور الخاص بك) ",
     oldprice: 260.0,
-    newprice: 200.0,
+    newprice: 180.0,
     rating: 5,
     onsale: true,
     category: "4",
@@ -196,7 +199,7 @@ const products = [
       "كول اوف ديوتي بلاك اوبس 3  - زومبي كرونيكلز للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة الكرونيكلز تحتوي على اللعبة كاملة و إضافة زومبي كرونيكلز وهي اضافة تحتوي على 8 خرائط زومبي من الاجزاء السابقة",
     note: " اللعبة تعمل على الاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون, التفعيل عن طريق دخول الحساب (تقوم بتزويدنا بالحساب وكلمة المرور الخاص بك) ",
     oldprice: 290.0,
-    newprice: 120.0,
+    newprice: 140.0,
     rating: 5,
     onsale: true,
     image: CODBO3ZChrImage,
@@ -206,15 +209,15 @@ const products = [
   },
   {
     id: 14,
-    name: "كول اوف ديوتي بلاك اوبس 3  -  زومبي ديلوكس",
+    name: "Grand Theft Auto V GTA 5 Premium Edition",
     description:
-      "كول اوف ديوتي بلاك اوبس 3  - زومبي ديلوكس للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة الديلوكس تحتوي على اللعبة كاملة و إضافة زومبي كرونيكلز و هي إضافة تحتوي على 8 خرائط زومبي من الاجزاء السابقة بالإضافة الى السيزون باس الذي يحتوى على جميع الإضافات الاخرى و الخرائط للمالتيبلاير و الزومبي",
+      "Grand Theft Auto V GTA 5 Premium Edition للاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون , النسخة البريميوم تحتوي على اللعبة كاملة و جميع الإضافات المتاحة.",
     note: "  اللعبة تعمل على الاكسبوكس سيريس اس وو اكس  و الاكسبوكس ون, التفعيل عن طريق دخول الحساب (تقوم بتزويدنا بالحساب وكلمة المرور الخاص بك) و يجب ان يكون لديك اشتراك اكسبوكس لايف جولد لتتمكن من اللعب اونلاين",
-    oldprice: 360.0,
-    newprice: 150.0,
+    oldprice: 200.0,
+    newprice: 80.0,
     rating: 5,
     onsale: true,
-    image: CODBO3ZDelImage,
+    image: GTAVPreImage,
     category: "4",
     platform: "Xbox One , Xbox Series X/S",
     relatedProducts: [13, 12, 15, 16],
@@ -263,6 +266,7 @@ const products = [
     category: "3",
     platform: "PC",
     relatedProducts: [6, 18],
+    available: false, // This product is currently not available
   },
   {
     id: 18,
@@ -278,6 +282,7 @@ const products = [
     category: "3",
     platform: "PC",
     relatedProducts: [17, 6],
+    available: false, // This product is currently not available
   },
 ];
 

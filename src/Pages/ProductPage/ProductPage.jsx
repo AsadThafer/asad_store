@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import products from "../../data/products.jsx";
 import paymentMethods from "../../data/paymentMethods.jsx";
+import activationMethods from "../../data/ActivationMethods.jsx";
 import WhatsAppButton from "../../Components/WhatsAppButton/WhatsAppButton.jsx";
 import "./ProductPage.css";
 import { Link } from "react-router-dom";
@@ -17,6 +18,9 @@ const ProductPage = () => {
   const [paymentMethod, setPaymentMethod] = useState(paymentMethods[0]);
   const [finalPrice, setFinalPrice] = useState(0);
   const [product, setProduct] = useState(products[id - 1]);
+  const [activationMethod, setActivationMethod] = useState(
+    activationMethods[0]
+  );
 
   useEffect(() => {
     if (product) {
@@ -92,42 +96,76 @@ const ProductPage = () => {
               <div className="lead">
                 {product.description ? product.description : "قيد الإنشاء"}
               </div>
-              <div className="d-flex flex-column">
-                <div>
-                  <div className="row align-items-center">
-                    <div
-                      className="col-auto"
-                      style={{
-                        marginTop: "1rem",
-                        marginBottom: "1rem",
-                      }}
-                    >
-                      <label className="lead" htmlFor="inputQuantity">
-                        الكمية :
-                      </label>
-                    </div>
-                    <div className="col-auto">
-                      <input
-                        className="form-control text-center me-3"
-                        id="inputQuantity"
-                        type="number"
-                        min="1"
-                        max="100"
-                        value={quantity}
-                        onChange={(e) => {
-                          if (e.target.value > 0 && e.target.value < 101) {
-                            setQuantity(e.target.value);
-                          }
-                          if (e.target.value < 1) {
-                            setQuantity(1);
-                          }
+
+              {product.available !== false ? (
+                <div className="d-flex flex-column">
+                  {/* خيار الكمية */}
+                  <div>
+                    <div className="row align-items-center">
+                      <div
+                        className="col-auto"
+                        style={{
+                          marginTop: "1rem",
+                          marginBottom: "1rem",
                         }}
-                        style={{ maxWidth: "4rem" }}
-                      />
+                      >
+                        <label className="lead" htmlFor="inputQuantity">
+                          الكمية :
+                        </label>
+                      </div>
+                      <div className="col-auto">
+                        <input
+                          className="form-control text-center me-3"
+                          id="inputQuantity"
+                          type="number"
+                          min="1"
+                          max="100"
+                          value={quantity}
+                          onChange={(e) => {
+                            if (e.target.value > 0 && e.target.value < 101) {
+                              setQuantity(e.target.value);
+                            }
+                            if (e.target.value < 1) {
+                              setQuantity(1);
+                            }
+                          }}
+                          style={{ maxWidth: "4rem" }}
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div>
+
+                  {/* طريقة التفعيل */}
+                  {product.platform?.includes("Xbox") && (
+                    <>
+                      <label className="lead" htmlFor="inputActivationMethod">
+                        طريقة تفعيل اللعبة :
+                      </label>
+
+                      <select
+                        className="form-select text-center me-3"
+                        id="inputActivationMethod"
+                        aria-label="Default select example"
+                        onChange={(e) => {
+                          setActivationMethod(
+                            activationMethods[e.target.value - 1]
+                          );
+                        }}
+                      >
+                        {activationMethods.map((activationMethod) => (
+                          <option
+                            className="text-center"
+                            key={activationMethod.id}
+                            value={activationMethod.id}
+                          >
+                            {activationMethod.name}
+                          </option>
+                        ))}
+                      </select>
+                    </>
+                  )}
+
+                  {/* طريقة الدفع */}
                   <div className="row align-items-center">
                     <div
                       className="col-auto"
@@ -150,43 +188,51 @@ const ProductPage = () => {
                         }}
                       >
                         {paymentMethods.map((paymentMethod) =>
-                          (product.newprice > 50) &
-                          (paymentMethod.id === 4) ? null : (
-                            <option
-                              className="text-center"
-                              key={paymentMethod.id}
-                              value={paymentMethod.id}
-                            >
-                              {paymentMethod.name}
-                            </option>
-                          )
+                          product.newprice > 50 && paymentMethod.id === 4
+                            ? null
+                            : (
+                              <option
+                                className="text-center"
+                                key={paymentMethod.id}
+                                value={paymentMethod.id}
+                              >
+                                {paymentMethod.name}
+                              </option>
+                            )
                         )}
                       </select>
                     </div>
                   </div>
+
+                  {/* السعر النهائي والرسوم */}
+                  <div
+                    className="alert alert-danger fw-bolder tax-note"
+                    role="alert"
+                  >
+                    {paymentMethod.taxrate && (
+                      <div>
+                        <div>عمولة زيادة : {paymentMethod.taxrate}% </div>
+                      </div>
+                    )}
+                    {product.newprice && <>السعر النهائي : {finalPrice}₪</>}
+                  </div>
+
+                  {/* زر WhatsApp */}
+                  <WhatsAppButton
+                    product={product}
+                    quantity={quantity}
+                    paymentMethod={paymentMethod}
+                    activationMethods={activationMethod}
+                    width={50}
+                    price={finalPrice}
+                  />
                 </div>
-
-                <div
-                  className="alert alert-danger fw-bolder tax-note"
-                  role="alert"
-                >
-                  {paymentMethod.taxrate ? (
-                    <div>
-                      <div>عمولة زيادة : {paymentMethod.taxrate}% </div>
-                    </div>
-                  ) : null}
-
-                  {product.newprice ? <>السعر النهائي : {finalPrice}₪</> : null}
+              ) : (
+                <div className="product-unavailable-alert">
+                  <h4>هذا المنتج غير متوفر حالياً</h4>
+                  <p>نعتذر على الإزعاج، يرجى المحاولة لاحقاً.</p>
                 </div>
-
-                <WhatsAppButton
-                  product={product}
-                  quantity={quantity}
-                  paymentMethod={paymentMethod}
-                  width={50}
-                  price={finalPrice}
-                />
-              </div>
+              )}
             </div>
           </div>
         </div>
@@ -206,6 +252,7 @@ const ProductPage = () => {
                       onClick={() => {
                         window.scrollTo(0, 0);
                       }}
+                      key={relatedProduct}
                     >
                       <div className="badge bg-warning text-dark me-2 mt-2 ">
                         {`${products[relatedProduct - 1].name}`}
